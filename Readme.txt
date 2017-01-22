@@ -1,4 +1,4 @@
-Obligation: First of all, thanks for giving me such a wonderful opportunity.
+
 
 Technologies Used:
 		>> Ruby on Rails(4.2.4)
