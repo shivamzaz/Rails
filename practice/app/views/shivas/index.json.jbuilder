@@ -1,0 +1,1 @@
+json.array! @shivas, partial: 'shivas/shiva', as: :shiva

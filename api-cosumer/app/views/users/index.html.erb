@@ -1,0 +1,6 @@
+<%= link_to "Create New User", new_user_path %>
+<%if @users.present? %>
+ <%= @users %>
+<%else%>
+  <p>No User is Found</p>
+<%end%>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User email</th>
+      <th>Player Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @posts.each do |post| %>
+      <tr>
+
+        <td style="background-color: #<%=post.player.color%>"><%= post.content %></td>
+        <td><%=post.player.email %></td>
+        <td style="background-color: #<%=post.player.color%>"><%=post.player.color %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+style="background-color: #<%=post.player.color%>"
+
+<%= link_to 'New Post', new_post_path %>
+
+
+
+
+----------------------------
+style="background-color: #<%=post.player.color%>"
+<td style="background-color: #<%=post.player.color%>"><%=post.player.color %></td>

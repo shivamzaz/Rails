@@ -1,0 +1,1 @@
+json.array! @pras, partial: 'pras/pra', as: :pra

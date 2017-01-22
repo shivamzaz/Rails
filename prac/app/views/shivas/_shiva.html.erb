@@ -1,0 +1,13 @@
+<head>
+<make 25 entry @least>
+</head>
+<table >
+<tbody>
+         <% for shiva in @shivas %>
+      <tr>
+        <td id=<%= shiva.color %>><%= shiva.color %></td>
+        <td><%= link_to 'Edit', edit_shiva_path(shiva) ,:remote=>true,:class=>'pony' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<head>
+<meta http-equiv="refresh" content="10">
+</head>
+<h1>Listing Shivas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<div class="shivas" id="incomplete_shivas", :remote => true >
+<%=render 'shiva' %>
+</div>
+</table>
+
+
+<br>
+
+<%= link_to 'New Shiva', new_shiva_path, id: "new_link", remote: true %>

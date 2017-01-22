@@ -1,0 +1,4 @@
+$('.pony').bind('ajax:success', function() {
+  
+   $(this).hide().after('<%= j render("form") %>');
+});

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pras.each do |pra| %>
+      <tr>
+        <td><%= pra.color %></td>
+        <td><%= pra.name %></td>
+        <td><%= link_to 'Show', pra %></td>
+        <td><%= link_to 'Edit', edit_pra_path(pra) %></td>
+        <td><%= link_to 'Destroy', pra, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pra', new_pra_path %>

@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Title:</strong>
+  <%= @father.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @father.content %>
+</p>
+
+<%= link_to 'Edit', edit_father_path(@father) %> |
+<%= link_to 'Back', fathers_path %>

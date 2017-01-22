@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shiv.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @shiv.password %>
+</p>
+
+<%= link_to 'Edit', edit_shiv_path(@shiv) %> |
+<%= link_to 'Back', shivs_path %>

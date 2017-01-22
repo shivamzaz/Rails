@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jerk</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if enter_signed_in? %>
+<p>hello, <%=current_enter.name%> - <%= link_to "Sign_out",destroy_enter_session_path,:method => 'delete' %>
+</p>
+<%end%>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<%= form_for(@shiva), remote: true do |f| %>
+  <% if @shiva.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shiva.errors.count, "error") %> prohibited this shiva from being saved:</h2>
+      <ul>
+      <% @shiva.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :color %><br>
+    
+    <td><%= f.text_field :color%></td>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

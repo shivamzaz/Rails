@@ -1,0 +1,25 @@
+<%= form_for(@father) do |f| %>
+  <% if @father.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@father.errors.count, "error") %> prohibited this father from being saved:</h2>
+
+      <ul>
+      <% @father.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Hit Me'%>
+  </div>
+<% end %>

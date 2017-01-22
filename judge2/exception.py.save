@@ -1,0 +1,6 @@
+try:
+	if(2/0==0):
+		print "fg"
+
+finally:
+		print "cool"

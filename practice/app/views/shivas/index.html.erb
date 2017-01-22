@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shivas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shivas.each do |shiva| %>
+      <tr>
+        <td><%= shiva.color %></td>
+        <td><%= link_to 'Show', shiva %></td>
+        <td><%= link_to 'Edit', edit_shiva_path(shiva) %></td>
+        <td><%= link_to 'Destroy', shiva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shiva', new_shiva_path, id: "new_link",remote: true %>
